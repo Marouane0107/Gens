@@ -1,0 +1,112 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.login{
+
+    height: 100vh;
+    background-color: rgb(176, 161, 136);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card{
+        width: 50%;
+        min-height: 600px;
+        display: flex;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .left{
+            flex: 1;
+            box-sizing: border-box;
+            background: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80') no-repeat center center;
+            background-size: cover;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            color: white;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.3);
+                z-index: 1;
+            }
+
+            > * {
+                position: relative;
+                z-index: 2;
+            }
+
+            h1{
+                // color: white;
+                font-size: 70px;
+                line-height: 10px;
+            }
+            p{
+                font-size: 20px;
+                line-height: 10px;
+            }
+
+            span{
+                color: rgb(248, 248, 244);
+                font-size: 14px;
+            }
+
+            button{
+                width: 50%;
+                padding: 10px;
+                border: none;
+                background-color: white;
+                color: orange;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+
+        .right{
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+
+            h1{
+                color: rgb(92, 89, 89)
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                input{
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    padding: 20px 10px;
+                }
+
+                button{
+                    width: 50%;
+                    padding: 10px;
+                    border: none;
+                    background-color: orange;
+                    color: white;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

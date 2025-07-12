@@ -1,0 +1,91 @@
+.rightBar {
+	flex: 3;
+	position: sticky;
+	top: 70px;
+	height: calc(100vh - 70px);
+	overflow: scroll;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.container {
+		padding: 20px;
+		
+		.item {
+			padding: 10px;
+			box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
+			margin-bottom: 20px;
+
+			span {
+				// font-size: 14px;
+				color: #555;
+			}
+
+			.user {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin: 20px 0px;
+	
+				.userInfo {
+					display: flex;
+					align-items: center;
+					gap: 20px;
+					position: relative;
+	
+					img {
+						width: 35px;
+						height: 35px;
+						border-radius: 50%;
+						object-fit: cover;
+					}
+
+					.online {
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+						background-color: limegreen;
+						position: absolute;
+						top: 0;
+						left: 26px;
+					}
+
+					p {
+						font-size: 14px;
+						color: gray;
+					}
+
+					span {
+						color: black;
+						// font-size: 15px;
+					}
+				}
+	
+				.buttons {
+					display: flex;
+					align-items: center;
+					gap: 10px;
+
+					button {
+						border: none;
+						padding: 5px;
+						color: white;
+						border-radius: 5px;
+						cursor: pointer;
+						font-size: 14px;
+
+						&:first-child {
+							background-color: #007bff;
+						}
+
+						&:last-child {
+							background-color: #dc3545;
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
