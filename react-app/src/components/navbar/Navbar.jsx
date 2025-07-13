@@ -1,8 +1,9 @@
 import "./navbar.scss";
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-// import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import GridViewOutlinesIcon from '@mui/icons-material/GridViewOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
@@ -10,6 +11,31 @@ import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 const Navbar = () => {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    useEffect(() => {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setIsDarkMode(true);
+            document.documentElement.classList.add('dark');
+        } else {
+            setIsDarkMode(false);
+            document.documentElement.classList.remove('dark');
+        }
+    }, []);
+
+    const toggleTheme = () => {
+        if (isDarkMode) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            setIsDarkMode(false);
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            setIsDarkMode(true);
+        }
+    };
+
     return (
         <div className="navbar">
             <div className="left">
@@ -17,7 +43,9 @@ const Navbar = () => {
                     <span className="logo">Gens</span>
                 </Link>
                 <HomeOutlinedIcon />
-                <DarkModeOutlinedIcon />
+                <div onClick={toggleTheme} style={{ cursor: 'pointer' }}>
+                    {isDarkMode ? <LightModeOutlinedIcon /> : <DarkModeOutlinedIcon />}
+                </div>
                 <GridViewOutlinesIcon />
                 <div className="search">
                     <SearchOutlinedIcon />

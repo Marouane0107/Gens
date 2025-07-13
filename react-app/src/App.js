@@ -16,9 +16,9 @@ function App() {
     return (
       <div>
         <Navbar />
-        <div style={{display: "flex"}}>
+        <div style={{ display: "flex" }}>
           <LeftBar />
-          <div style={{flex: 6, padding: "20px"}}>
+          <div style={{ flex: 6, padding: "20px" }}>
             <Outlet />
           </div>
           <RightBar />
@@ -40,7 +40,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ProtectedRoute> <Layout /> </ProtectedRoute>}>
           <Route path="/" element={<Home />} />
-          <Route path="/profile/:id" element= {<Profile />} />
+          <Route path="/profile/:id" element={<Profile />} />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

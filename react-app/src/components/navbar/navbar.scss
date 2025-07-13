@@ -1,14 +1,15 @@
 .navbar{
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 10px;
     height: 50px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    z-index: 100;
 
     .left{
         display: flex;
@@ -17,20 +18,35 @@
         span{
             font-weight: bold;
             font-size: 20px;
-            color: #333;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
         }
 
         .search{
             display: flex;
             align-items: center;
             gap: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid var(--border-color);
             border-radius: 5px;
             padding: 5px 10px;
+            background-color: var(--bg-secondary);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            
             input{
                 width: 400px;
                 border: none;
                 font-size: 14px;
+                background-color: transparent;
+                color: var(--text-primary);
+                transition: color 0.3s ease;
+                
+                &::placeholder {
+                    color: var(--text-muted);
+                }
+                
+                &:focus {
+                    outline: none;
+                }
             }
         }
     }
@@ -49,12 +65,12 @@
                 height: 30px;
                 border-radius: 50%;
                 object-fit: cover;
-
             }
 
             span{
                 font-size: 14px;
-                color: #333;
+                color: var(--text-primary);
+                transition: color 0.3s ease;
             }
         }
     }

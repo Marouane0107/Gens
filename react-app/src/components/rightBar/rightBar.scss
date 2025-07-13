@@ -4,6 +4,8 @@
 	top: 70px;
 	height: calc(100vh - 70px);
 	overflow: scroll;
+	background-color: var(--bg-primary);
+	transition: background-color 0.3s ease;
 
 	&::-webkit-scrollbar {
 		display: none;
@@ -14,12 +16,15 @@
 		
 		.item {
 			padding: 10px;
-			box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
+			box-shadow: 0 0 15px 1px var(--shadow);
 			margin-bottom: 20px;
+			background-color: var(--bg-secondary);
+			border-radius: 8px;
+			transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
 			span {
-				// font-size: 14px;
-				color: #555;
+				color: var(--text-secondary);
+				transition: color 0.3s ease;
 			}
 
 			.user {
@@ -53,12 +58,13 @@
 
 					p {
 						font-size: 14px;
-						color: gray;
+						color: var(--text-muted);
+						transition: color 0.3s ease;
 					}
 
 					span {
-						color: black;
-						// font-size: 15px;
+						color: var(--text-primary);
+						transition: color 0.3s ease;
 					}
 				}
 	
@@ -74,6 +80,11 @@
 						border-radius: 5px;
 						cursor: pointer;
 						font-size: 14px;
+						transition: background-color 0.3s ease;
+
+						&:hover {
+							opacity: 0.9;
+						}
 
 						&:first-child {
 							background-color: #007bff;
@@ -85,7 +96,6 @@
 					}
 				}
 			}
-
 		}
 	}
 }

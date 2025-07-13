@@ -4,10 +4,13 @@
     top: 70px;
     height: calc(100vh - 70px);
     overflow: scroll;
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease;
 
     &::-webkit-scrollbar {
         display: none;
     }
+    
     .container{
         padding: 20px;
 
@@ -15,11 +18,11 @@
             margin: 15px 0;
             border: none;
             height: 1px;
-            border-top: 1px solid #ccc;
+            border-top: 1px solid var(--border-color);
+            transition: border-color 0.3s ease;
         }
 
         .menu{
-
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -27,8 +30,10 @@
             span{
                 font-weight: bold;
                 font-size: 12px;
-                color: #333;
+                color: var(--text-secondary);
+                transition: color 0.3s ease;
             }
+            
             .user{
                 display: flex;
                 align-items: center;
@@ -39,12 +44,12 @@
                     height: 30px;
                     border-radius: 50%;
                     object-fit: cover;
-
                 }
 
                 span{
-                    // font-weight: 500;
                     font-size: 14px;
+                    color: var(--text-primary);
+                    transition: color 0.3s ease;
                 }
             }
 
@@ -52,16 +57,35 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                cursor: pointer;
+                padding: 8px;
+                border-radius: 8px;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: var(--bg-secondary);
+                }
 
                 img{
                     width: 30px;
+                    filter: var(--img-filter, none);
                 }
 
                 span{
                     font-size: 14px;
-                    
+                    color: var(--text-primary);
+                    transition: color 0.3s ease;
                 }
             }
+        }
+    }
+}
+
+// Dark mode specific adjustments for icons
+html.dark {
+    .leftBar {
+        .menu .item img {
+            filter: brightness(0.8) contrast(1.2);
         }
     }
 }

@@ -6,88 +6,89 @@ body {
 
 .register{
 
-    height: 100vh;
-    background-color: rgb(193, 190, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	height: 100vh;
+	background-color: rgb(193, 190, 255);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-    .card{
-        width: 50%;
-        display: flex;
-        flex-direction: row-reverse;
-        background-color: white;
-        border-radius: 10px;
-        min-height: 600px;
-        overflow: hidden;
+	.card{
+		width: 50%;
+		display: flex;
+		flex-direction: row-reverse;
+		background-color: white;
+		border-radius: 10px;
+		min-height: 600px;
+		overflow: hidden;
 
-        .left{
-            flex: 1;
-            background: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18') no-repeat center center;
-            background-size: cover;
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            color: white;
+		.left{
+			flex: 1;
+			background: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18') no-repeat center center;
+			background-size: cover;
+			padding: 50px;
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			color: white;
 
-            h1{
-                color: rgb(188, 161, 83);
-                font-size: 100px;
-                line-height: 100px;
-            }
-            p{
-                
-            }
+			h1{
+				color: rgb(188, 161, 83);
+				font-size: 100px;
+				line-height: 100px;
+			}
+			p{
+				color: black;
+			}
 
-            span{
-                font-size: 14px;
-            }
+			span{
+				font-size: 14px;
+				color: black;
+			}
 
-            button{
-                width: 50%;
-                padding: 10px;
-                border: none;
-                background-color: white;
-                color: orange;
-                font-weight: bold;
-                cursor: pointer;
-            }
-        }
+			button{
+				width: 50%;
+				padding: 10px;
+				border: none;
+				background-color: white;
+				color: orange;
+				font-weight: bold;
+				cursor: pointer;
+			}
+		}
 
-        .right{
-            flex: 1;
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            justify-content: center;
+		.right{
+			flex: 1;
+			padding: 50px;
+			display: flex;
+			flex-direction: column;
+			gap: 50px;
+			justify-content: center;
 
-            h1{
-                color: rgb(92, 89, 89)
-            }
+			h1{
+				color: rgb(92, 89, 89)
+			}
 
-            form{
-                display: flex;
-                flex-direction: column;
-                gap: 30px;
+			form{
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
 
-                input{
-                    border: none;
-                    border-bottom: 1px solid lightgray;
-                    padding: 20px 10px;
-                }
+				input{
+					border: none;
+					border-bottom: 1px solid lightgray;
+					padding: 20px 10px;
+				}
 
-                button{
-                    width: 50%;
-                    padding: 10px;
-                    border: none;
-                    background-color: orange;
-                    color: white;
-                    font-weight: bold;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
+				button{
+					width: 50%;
+					padding: 10px;
+					border: none;
+					background-color: orange;
+					color: white;
+					font-weight: bold;
+					cursor: pointer;
+				}
+			}
+		}
+	}
 }
