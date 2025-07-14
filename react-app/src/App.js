@@ -7,10 +7,13 @@ import RightBar from './components/rightBar/RightBar';
 import Profile from './pages/profile/profile';
 import Home from './pages/home/home';
 import "./style.scss";
+import { useContext } from 'react';
+import { AuthContext } from './components/context/authContext';
+import { Navigate } from 'react-router-dom';
 
 function App() {
 
-  const currentUser = false; // will be replaced with actual user state management after adding backend
+  const currentUser = useContext(AuthContext).currentUser;
 
   const Layout = () => {
     return (
@@ -29,7 +32,7 @@ function App() {
 
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
-      // return <Navigate to="/login" />;
+      return <Navigate to="/login" />;
     }
 
     return children;

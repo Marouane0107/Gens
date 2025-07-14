@@ -9,9 +9,12 @@ import GridViewOutlinesIcon from '@mui/icons-material/GridViewOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import { AuthContext } from '../context/authContext';
+import { useContext } from 'react';
 
 const Navbar = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const { currentUser } = useContext(AuthContext);
 
     useEffect(() => {
         const theme = localStorage.getItem('theme');

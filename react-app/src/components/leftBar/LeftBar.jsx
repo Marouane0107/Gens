@@ -13,6 +13,7 @@ import fundraiserIcon from "../../images/fundraiser.svg";
 import tutorialsIcon from "../../images/tutorials.svg";
 import coursesIcon from "../../images/courses.svg";
 
+
 const LeftBar = () => {
 	return (
 		<div className="leftBar">
