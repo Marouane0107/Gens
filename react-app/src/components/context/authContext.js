@@ -5,9 +5,8 @@ export const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
 	const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')) || null);
 
-	const login = (user) => {
-		setCurrentUser(true); // Simulating a login, replace with actual user data
-		// Here i would typically also handle authentication with a backend service
+	const login = () => {
+		setCurrentUser({id: 1, name: 'Mar1', profilePic: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600'});
 	};
 
 	useEffect(() => {

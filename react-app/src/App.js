@@ -13,7 +13,7 @@ import { Navigate } from 'react-router-dom';
 
 function App() {
 
-  const currentUser = useContext(AuthContext).currentUser;
+  const { currentUser } = useContext(AuthContext);
 
   const Layout = () => {
     return (
