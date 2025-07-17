@@ -19,12 +19,12 @@ function App() {
     return (
       <div>
         <Navbar />
-        <div style={{ display: "flex" }}>
-          <LeftBar />
-          <div style={{ flex: 6, padding: "20px" }}>
+        <div className="responsive-layout">
+          <LeftBar className="responsive-sidebar" />
+          <div className="responsive-content">
             <Outlet />
           </div>
-          <RightBar />
+          <RightBar className="responsive-sidebar" />
         </div>
       </div>
     );

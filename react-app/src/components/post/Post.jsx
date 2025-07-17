@@ -12,10 +12,14 @@ import { useState } from "react";
 const Post = ({post}) => {
 
     const [commentOpen, setCommentOpen] = useState(false);
+    // Temporary placeholder for liked state it will be replaced with actual logic later
+    const [liked, setLiked] = useState(false);
+    const [likeCount, setLikeCount] = useState(post.likes || 12);
 
-    // Temporary placeholder for post component
-
-    const liked  = false; // This can be replaced with actual logic to check if the post is liked
+    const handleLike = () => {
+        setLiked(!liked);
+        setLikeCount(liked ? likeCount - 1 : likeCount + 1);
+    };
 
     return (
         <div className="post">
@@ -37,9 +41,10 @@ const Post = ({post}) => {
                     <img src={post.img} alt="" />
                 </div>
                 <div className="info">
-                    <div className="item">
-                        {liked ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon />}
-                        12 Likes
+                    <div className="item" onClick={handleLike}>
+                        {/* Here added hover effect for like and comment icons i well change it later */}
+                        {liked ? <FavoriteOutlinedIcon style={{color: "#e74c3c"}} /> : <FavoriteBorderOutlinedIcon />}
+                        {likeCount} Likes
                     </div>
                     <div className="item" onClick={() => setCommentOpen(!commentOpen)}>
                         <ChatBubbleOutlineOutlinedIcon />

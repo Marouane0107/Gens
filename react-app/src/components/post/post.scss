@@ -78,6 +78,24 @@
                 gap: 5px;
                 cursor: pointer;
                 font-size: 14px;
+                //here aded hover effect for like and comment icons
+                color: var(--text-secondary);
+                padding: 8px 12px;
+                border-radius: 20px;
+                transition: all 0.2s ease;
+
+                &:hover{
+                    background-color: var(--bg-secondary);
+                    color: var(--text-primary);
+                }
+
+                &:active{
+                    transform: scale(0.95);
+                }
+
+                svg{
+                    transition: color 0.2s ease;
+                }
             }
         }
     }
