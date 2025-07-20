@@ -23,37 +23,46 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   color: #1a202c;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
-// Light mode (default)
+// Light mode (default) - Updated to match login theme
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f7fafc;
-  --bg-tertiary: #edf2f7;
-  --text-primary: #1a202c;
+  --bg-primary: rgba(255, 255, 255, 0.95);
+  --bg-secondary: rgba(245, 247, 250, 0.9);
+  --bg-tertiary: rgba(195, 207, 226, 0.8);
+  --text-primary: #333333;
   --text-secondary: #4a5568;
   --text-muted: #718096;
-  --border-color: #e2e8f0;
-  --shadow: rgba(0, 0, 0, 0.1);
+  --border-color: rgba(102, 126, 234, 0.2);
+  --shadow: rgba(102, 126, 234, 0.1);
+  --accent-primary: #667eea;
+  --accent-secondary: #764ba2;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
-// Dark mode
+// Dark mode - Updated to match login theme
 html.dark {
-  --bg-primary: #1a202c;
-  --bg-secondary: #2d3748;
-  --bg-tertiary: #4a5568;
+  --bg-primary: rgba(26, 32, 44, 0.95);
+  --bg-secondary: rgba(45, 55, 72, 0.9);
+  --bg-tertiary: rgba(74, 85, 104, 0.8);
   --text-primary: #f7fafc;
   --text-secondary: #e2e8f0;
   --text-muted: #a0aec0;
-  --border-color: #4a5568;
+  --border-color: rgba(102, 126, 234, 0.3);
   --shadow: rgba(0, 0, 0, 0.3);
+  --accent-primary: #764ba2;
+  --accent-secondary: #667eea;
+  --gradient-primary: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  --gradient-secondary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 
   body {
-    background-color: var(--bg-primary);
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
     color: var(--text-primary);
   }
 }
@@ -62,6 +71,15 @@ html.dark {
 .navbar, .leftBar, .rightBar {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 8px 25px var(--shadow);
+}
+
+.navbar {
+  border-radius: 0;
+  margin: 0;
 }
 
 // Main layout responsive structure

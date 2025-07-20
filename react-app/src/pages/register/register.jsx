@@ -6,11 +6,15 @@ const Register = () => {
 	<div className="register">
 		<div className="card">
 			<div className="left">
-				<h1>Gens</h1>
-				<p>
-					Please enter your credentials to log in.
-				</p>
-				<span>Don't have an account? Register now!</span>
+				<h1>Join Gens</h1>
+				<div className="welcome-message">
+					<p>Create your account and</p>
+					<p>become part of our community.</p>
+					<p>Share your story,</p>
+					<p>Connect with friends,</p>
+					<p>And discover amazing content.</p>
+				</div>
+				<span>Already have an account?</span>
                 <Link to="/login">
 				    <button>Login</button>
                 </Link>

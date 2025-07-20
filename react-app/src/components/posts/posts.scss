@@ -2,8 +2,10 @@
 
 .posts{
     display: flex;
-    // flex-wrap: wrap;
     flex-direction: column;
-    gap: 50px;
-    // margin-top: 20px;
+    gap: 30px;
+    
+    @media (max-width: 768px) {
+        gap: 20px;
+    }
 }

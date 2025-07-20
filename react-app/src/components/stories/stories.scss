@@ -2,17 +2,30 @@
 
 .stories{
     display: flex;
-    gap: 10px;
+    gap: 15px;
     height: 250px;
     margin-bottom: 30px;
+    padding: 20px;
+    background: var(--bg-primary);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
 
     .story{
         flex: 1;
         width: 120px;
         height: 200px;
-        border-radius: 10px;
+        border-radius: 15px;
         overflow: hidden;
         position: relative;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
 
         img{
             width: 100%;
@@ -32,10 +45,10 @@
             position: absolute;
             bottom: 25px;
             left: 10px;
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
             color: white;
-            background-color: #5271ff;
+            background: var(--gradient-primary);
             border: none;
             border-radius: 50%;
             cursor: pointer;
@@ -43,10 +56,14 @@
             font-weight: bold;
             display: flex;
             align-items: center;
-            justify-content: center;   
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 
             &:hover{
-                background-color: rgba(81, 173, 81, 0.7);
+                background: var(--gradient-secondary);
+                transform: scale(1.1);
+                box-shadow: 0 8px 20px rgba(118, 75, 162, 0.5);
             }
         }
     }

@@ -1,17 +1,17 @@
 import "./leftBar.scss";
-import friendsIcon from "../../images/friends.svg";
-import groupsIcon from "../../images/groups.svg";
-import marketplaceIcon from "../../images/marketplace.svg";
-import watchIcon from "../../images/watch.svg";
-import memoriesIcon from "../../images/memories.svg";
-import eventsIcon from "../../images/events.svg";
-import gamingIcon from "../../images/gaming.svg";
-import galleryIcon from "../../images/gallery.svg";
-import videosIcon from "../../images/videos.svg";
-import messagesIcon from "../../images/messages.svg";
-import fundraiserIcon from "../../images/fundraiser.svg";
-import tutorialsIcon from "../../images/tutorials.svg";
-import coursesIcon from "../../images/courses.svg";
+import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
+import GroupsRoundedIcon from "@mui/icons-material/GroupsRounded";
+import StorefrontRoundedIcon from "@mui/icons-material/StorefrontRounded";
+import PlayCircleRoundedIcon from "@mui/icons-material/PlayCircleRounded";
+import PhotoLibraryRoundedIcon from "@mui/icons-material/PhotoLibraryRounded";
+import EventRoundedIcon from "@mui/icons-material/EventRounded";
+import SportsEsportsRoundedIcon from "@mui/icons-material/SportsEsportsRounded";
+import CollectionsRoundedIcon from "@mui/icons-material/CollectionsRounded";
+import VideoLibraryRoundedIcon from "@mui/icons-material/VideoLibraryRounded";
+import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
+import VolunteerActivismRoundedIcon from "@mui/icons-material/VolunteerActivismRounded";
+import SchoolRoundedIcon from "@mui/icons-material/SchoolRounded";
+import MenuBookRoundedIcon from "@mui/icons-material/MenuBookRounded";
 import { useContext } from "react";
 import { AuthContext } from "../context/authContext";
 
@@ -27,23 +27,23 @@ const LeftBar = () => {
 						<span>{currentUser.name}</span>
 					</div>
 					<div className="item">
-						<img src={friendsIcon} alt="Friends" />
+						<PeopleRoundedIcon />
 						<span>Friends</span>
 					</div>
 					<div className="item">
-						<img src={groupsIcon} alt="Groups" />
+						<GroupsRoundedIcon />
 						<span>Groups</span>
 					</div>
 					<div className="item">
-						<img src={marketplaceIcon} alt="Marketplace" />
+						<StorefrontRoundedIcon />
 						<span>Marketplace</span>
 					</div>
 					<div className="item">
-						<img src={watchIcon} alt="Watch" />
+						<PlayCircleRoundedIcon />
 						<span>Watch</span>
 					</div>
 					<div className="item">
-						<img src={memoriesIcon} alt="Memories" />
+						<PhotoLibraryRoundedIcon />
 						<span>Memories</span>
 					</div>
 				</div>
@@ -51,23 +51,23 @@ const LeftBar = () => {
 				<div className="menu">
 					<span>Your Shortcuts</span>
 					<div className="item">
-						<img src={eventsIcon} alt="Events" />
+						<EventRoundedIcon />
 						<span>Events</span>
 					</div>
 					<div className="item">
-						<img src={gamingIcon} alt="Gaming" />
+						<SportsEsportsRoundedIcon />
 						<span>Gaming</span>
 					</div>
 					<div className="item">
-						<img src={galleryIcon} alt="Gallery" />
+						<CollectionsRoundedIcon />
 						<span>Gallery</span>
 					</div>
 					<div className="item">
-						<img src={videosIcon} alt="Videos" />
+						<VideoLibraryRoundedIcon />
 						<span>Videos</span>
 					</div>
 					<div className="item">
-						<img src={messagesIcon} alt="Messages" />
+						<ChatRoundedIcon />
 						<span>Messages</span>
 					</div>
 				</div>
@@ -75,15 +75,15 @@ const LeftBar = () => {
 				<div className="menu">
 					<span>Others</span>
 					<div className="item">
-						<img src={fundraiserIcon} alt="Fundraiser" />
+						<VolunteerActivismRoundedIcon />
 						<span>Fundraiser</span>
 					</div>
 					<div className="item">
-						<img src={tutorialsIcon} alt="Tutorials" />
+						<SchoolRoundedIcon />
 						<span>Tutorials</span>
 					</div>
 					<div className="item">
-						<img src={coursesIcon} alt="Courses" />
+						<MenuBookRoundedIcon />
 						<span>Courses</span>
 					</div>
 				</div>
